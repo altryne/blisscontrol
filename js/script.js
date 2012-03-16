@@ -217,13 +217,13 @@ $('document').ready(function(){
 
 
     //init
-    var state = History.getState();
-    generate_url(state.data[1],state.data[0]);
+//    var state = History.getState();
+    generate_url();
     getShareButtons();
     // Bind to StateChange Event
-    History.Adapter.bind(window,'statechange',function(){
-        var State = History.getState();
-    });
+//    History.Adapter.bind(window,'statechange',function(){
+//        var State = History.getState();
+//    });
 
 
     $('body').on('click',function(e){
@@ -290,5 +290,5 @@ generate_url = function(setting,service){
         $('#tmpl_action').html($('#setting .text')[0].innerText + ' in ' + $("#service .text")[0].innerText);
         $('#action').addClass('no_cont');
     }
-    History.pushState([service,setting], null, "/"+setting+"/"+service);
+//    History.pushState([service,setting], null, "/"+setting+"/"+service);
 }
