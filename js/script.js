@@ -285,7 +285,7 @@ generate_url = function(setting,service){
         $('#action').removeClass('no_cont');
         url = services_obj[service][setting];
         $('#go').attr('href', url);
-        $('#link').val(url);
+        $('#link').attr('href',url).html(url);
     }else{
         $('#tmpl_action').html($('#setting .text')[0].innerText + ' in ' + $("#service .text")[0].innerText);
         $('#action').addClass('no_cont');
