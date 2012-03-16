@@ -107,7 +107,7 @@ var services_obj = {
         "pass":"",
         "recover":"http://www.linkedin.com/passwordReset"
     },
-    "google+":{
+    "google":{
         "profile_pic":"",
         "bio":"",
         "delete":"",
@@ -209,12 +209,11 @@ $('document').ready(function(){
     // Bind to StateChange Event
     History.Adapter.bind(window,'statechange',function(){
         var State = History.getState();
-        History.log(State.data, State.title, State.url);
     });
 
 
     $('body').on('click',function(e){
-        if(!$(e.target).is('#setting,#settings,#service,#services,li')){
+        if(!$(e.target).is('#setting,#settings,#service,#services,li,.text')){
             $('#settings,#services').hide();
         }
     })

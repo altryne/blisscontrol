@@ -76,24 +76,76 @@ td { vertical-align: top; }
 #main{
     width: 100%;
 }
+
 #choose{
     margin: 0 auto;
     margin-top:15px;
-    width:650px;
+    width:730px;
     text-align: center;
     position: relative;
 }
 #setting,#service{
     display: inline-block;
-    width:150px;
-    height:150px;
-    border: 1px dashed;
+    width:180px;
+    height:30px;
+    border: 8px dashed #656565;
     cursor: pointer;
     vertical-align: middle;
+    border-radius: 5px;
+    font-size: 20px;
+    padding-top:150px;
+    background-repeat: no-repeat;
+    background-position: 50% 40%;
+    margin:35px;
 }
-#in{
+#setting{
+    height: 180px;
+    padding: 0px 20px;
+    width: 140px;
+    font-weight: bold;
+    font-size: 23px;
+    position: relative;
+}
+#setting .height_div{
+    height: 100%;
+    vertical-align: middle;
+    width: 1px;
+    background: green;
+    display: inline-block;
+    margin-left: -10px;
+    visibility: hidden;
+}
+#service .text::after{
+    display: inline-block;
+    height: 16px;
+    width: 30px;
+    background: url(../img/arr.png) 0 0 no-repeat;
+    content: "";
+    vertical-align: middle;
+    margin-left: 1px;
+}
+#setting::after{
+    display: inline-block;
+    height: 16px;
+    width: 30px;
+    background: url(../img/arr.png) 0 0 no-repeat;
+    content: "";
+    vertical-align: middle;
+    margin-left: 1px;
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 0px;
+}
+#setting .text{
     display: inline-block;
     vertical-align: middle;
+}
+#title,#in{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 35px;
+    font-weight: bold;
 }
 ul{
     display: none;
@@ -103,18 +155,36 @@ ul{
     margin: 0;
     text-align: left;
     background: white;
-    border: 1px #eee solid;
+    border: 5px dashed #656565;
 }
 #settings{
-    left:160px;
+    left: 170px;
+    top: -90px;
+    padding: 10px 0;
 }
 #services{
-    right:220px;
+    right: 30px;
+    width: 210px;
+    top: -50px;
+    padding: 10px 0;
 }
 li{
     font-size: 15px;
-    cursor: pointer
+    cursor: pointer;
+    padding:5px 10px;
+    cursor: pointer;
 }
+li:hover{
+    background: #eee;
+}
+#services li{
+    background-size: 28px;
+    background-position: 10px 50%;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    padding-left:45px;
+}
+
 #action{
     margin-top:30px;
 }
@@ -136,9 +206,9 @@ li{
    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
    background: -o-linear-gradient(top, #3e779d, #65a9d7);
    padding: 5px 10px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   border-radius: 8px;
+   -webkit-border-radius: 2px;
+   -moz-border-radius: 2px;
+   border-radius: 2px;
    -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
    -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
    box-shadow: rgba(0,0,0,1) 0 1px 0;
@@ -160,7 +230,22 @@ li{
 
 
 
+/* social icons*/
 
+
+#facebook ,#service.facebook{background-image:url(../img/facebook.png)}
+#twitter ,#service.twitter{background-image:url(../img/twitter.png)}
+#pinterest ,#service.pinterest{background-image:url(../img/pinterest.png)}
+#tumblr ,#service.tumblr{background-image:url(../img/tumblr.png)}
+#youtube ,#service.youtube{background-image:url(../img/youtube.png)}
+#foursquare ,#service.foursquare{background-image:url(../img/foursquare.png)}
+#linkedin ,#service.linkedin{background-image:url(../img/linkedin.png)}
+#google ,#service.google{background-image:url(../img/google.png)}
+#meetup ,#service.meetup{background-image:url(../img/meetup.png)}
+#stumbleupon ,#service.stumbleupon{background-image:url(../img/stumbleupon.png)}
+#path ,#service.path{background-image:url(../img/path.png)}
+#instagram ,#service.instagram{background-image:url(../img/instagram.png)}
+#flickr ,#service.flickr{background-image:url(../img/flickr.png)}
 
 
 
