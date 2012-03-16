@@ -25,6 +25,28 @@
 
 </header>
 <div id="main" role="main">
+	<ul class="social_buttons">
+	  <li>
+	    <fb:like href="http://blisscontrol.com" send="true"
+	      showfaces="false" width="120" layout="button_count"
+	      action="like"/>
+	  </fb:like></li>
+	  <li>
+	    <a href="http://twitter.com/share" data-url="http://blisscontrol.com"
+	      data-text="Manage settings on your social networks with ease" data-via="@benlang"
+	      class="twitter-share-button">Tweet</a>
+	  </li>
+	  <li>
+	    <g:plusone size="medium" callback="plusone_vote"></g:plusone>
+	  </li>
+	  <li>
+	    <script type="in/share" data-url="http://blisscontrol.com"
+	      data-counter="right"></script>
+	  </li>
+	  <li>
+		  <su:badge layout="1"></su:badge>
+	  </li>
+	</ul>
 	<h1>Have trouble managing your settings on social networks?</h1>
 
 	<h2>We solve that issue for you!</h2>
@@ -35,43 +57,44 @@
 			<div class="text">
 				Change profile picture
 			</div>
+			<ul id="settings">
+				<li class="setting" id="bio" data-id="bio">Change bio</li>
+				<li class="setting" id="email_settings" data-id="email_settings">Change email settings</li>
+				<li class="setting" id="profile_pic" data-id="profile_pic">Change profile picture</li>
+				<li class="setting" id="pass" data-id="pass">Change password</li>
+				<li class="setting" id="privacy" data-id="privacy">Change privacy settings</li>
+				<li class="setting" id="design" data-id="design">Change design</li>
+				<li class="setting" id="username" data-id="username">Change username</li>
+				<li class="setting" id="mobile" data-id="mobile">Change mobile settings</li>
+				<li class="setting" id="accounts" data-id="accounts">Change connected accounts</li>
+				<li class="setting" id="email" data-id="email">Change email</li>
+				<li class="setting" id="recover" data-id="recover">Recover password</li>
+				<li class="setting" id="apps" data-id="apps">Change 3rd party permissions</li>
+				<li class="setting" id="delete" data-id="delete">Delete account</li>
+			</ul>
 		</div>
-		<ul id="settings">
-			<li class="setting" id="profile_pic" data-id="profile_pic">Change profile picture</li>
-			<li class="setting" id="bio" data-id="bio">Change bio</li>
-			<li class="setting" id="apps" data-id="apps">Change 3rd party permissions</li>
-			<li class="setting" id="email_settings" data-id="email_settings">Change email settings</li>
-			<li class="setting" id="privacy" data-id="privacy">Change privacy settings</li>
-			<li class="setting" id="design" data-id="design">Change design</li>
-			<li class="setting" id="username" data-id="username">Change username</li>
-			<li class="setting" id="mobile" data-id="mobile">Change mobile settings</li>
-			<li class="setting" id="accounts" data-id="accounts">Change connected accounts</li>
-			<li class="setting" id="email" data-id="email">Change email</li>
-			<li class="setting" id="pass" data-id="pass">Change password</li>
-			<li class="setting" id="recover" data-id="recover">Recover password</li>
-			<li class="setting" id="delete" data-id="delete">Delete account</li>
-		</ul>
+
 		<div id="in">On</div>
 		<div id="service" class="facebook">
 			<div class="text">
 				Facebook
 			</div>
+			<ul id="services">
+				<li class="service" id="facebook" data-id="facebook">Facebook</li>
+				<li class="service" id="twitter" data-id="twitter">Twitter</li>
+				<li class="service" id="stumbleupon" data-id="stumbleupon">StumbleUpon</li>
+				<li class="service" id="pinterest" data-id="pinterest">Pinterest</li>
+				<li class="service" id="tumblr" data-id="tumblr">Tumblr</li>
+				<li class="service" id="foursquare" data-id="foursquare">Foursquare</li>
+				<li class="service" id="youtube" data-id="youtube">YouTube</li>
+				<li class="service" id="linkedin" data-id="linkedin">LinkedIn</li>
+				<li class="service" id="google" data-id="google">Google+</li>
+				<li class="service" id="meetup" data-id="meetup">Meetup</li>
+				<li class="service" id="path" data-id="path">Path</li>
+				<li class="service" id="instagram" data-id="instagram">Instagram</li>
+				<li class="service" id="flickr" data-id="flickr">Flickr</li>
+			</ul>
 		</div>
-		<ul id="services">
-			<li class="service" id="facebook" data-id="facebook">Facebook</li>
-			<li class="service" id="twitter" data-id="twitter">Twitter</li>
-			<li class="service" id="pinterest" data-id="pinterest">Pinterest</li>
-			<li class="service" id="tumblr" data-id="tumblr">Tumblr</li>
-			<li class="service" id="youtube" data-id="youtube">YouTube</li>
-			<li class="service" id="foursquare" data-id="foursquare">Foursquare</li>
-			<li class="service" id="linkedin" data-id="linkedin">LinkedIn</li>
-			<li class="service" id="google" data-id="google">Google+</li>
-			<li class="service" id="meetup" data-id="meetup">Meetup</li>
-			<li class="service" id="stumbleupon" data-id="stumbleupon">StumbleUpon</li>
-			<li class="service" id="path" data-id="path">Path</li>
-			<li class="service" id="instagram" data-id="instagram">Instagram</li>
-			<li class="service" id="flickr" data-id="flickr">Flickr</li>
-		</ul>
 		<div id="action">
 			<div id="go_cont">
 				<input id="link" type="text"/>
@@ -90,6 +113,7 @@
 Idea by: <a href="http://benjaminlang.com">Ben Lang</a> (Twitter Icon) & <a href="http://driplabs.com">Tim Kendall</a><br>
 Code and design by: <a href="http://alexw.me">Alex Wolkov</a> and Shay?<br>
 Assistance from: <a href="http://familio.com">Avi</a>
+<div id="fb-root"></div>
 
 <script src="/js/libs/jquery-1.7.1.min.js"></script>
 <script src="/js/libs/jquery.history.js"></script>

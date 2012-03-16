@@ -201,11 +201,25 @@ var services_obj = {
 var cur_service = 'facebook';
 var cur_setting = 'profile_pic';
 
+window.fbAsyncInit = function() {
+  FB.init({appId: '<APPID>', status: true, cookie: true, xfbml: true});
+};
+(function() {
+  var e = document.createElement('script');
+  e.type = 'text/javascript';
+  e.src = document.location.protocol +
+     '//connect.facebook.net/en_US/all.js';;
+  e.async = true;
+  document.getElementById('fb-root').appendChild(e);
+}());
+
 $('document').ready(function(){
+
+
     //init
     var state = History.getState();
     generate_url(state.data[1],state.data[0]);
-
+    getShareButtons();
     // Bind to StateChange Event
     History.Adapter.bind(window,'statechange',function(){
         var State = History.getState();
@@ -213,7 +227,7 @@ $('document').ready(function(){
 
 
     $('body').on('click',function(e){
-        if(!$(e.target).is('#setting,#settings,#service,#services,li,.text')){
+        if(!$(e.target).is('#setting,#settings,#service,#services,.text')){
             $('#settings,#services').hide();
         }
     })
@@ -230,6 +244,7 @@ $('document').ready(function(){
 
     $('#settings').on('click','li',function(){
         var setting = $(this).data('id');
+        $('#settings,#services').hide();
         generate_url(setting, cur_service);
 
     });
@@ -240,6 +255,21 @@ $('document').ready(function(){
     });
 });
 
+getShareButtons = function(){
+    $.getScript('http://platform.twitter.com/widgets.js',function(){
+        console.log('linkedin loaded');
+    });
+    $.getScript('http://platform.linkedin.com/in.js',function(){
+        console.log('linkedin loaded');
+    });
+    $.getScript('https://apis.google.com/js/plusone.js',function(){
+        console.log('google plus');
+    });
+    $.getScript('//platform.stumbleupon.com/1/widgets.js',function(){
+        console.log('stumbleupon');
+    });
+
+}
 
 generate_url = function(setting,service){
     var service = cur_service = service || cur_service;
@@ -247,8 +277,8 @@ generate_url = function(setting,service){
 
     if(!services_obj[service]){ return };
 
-    $('#setting').attr('class',setting).find('.text').html($('#'+setting)[0].textContent);
-    $('#service').attr('class',service).find('.text').html($('#'+service)[0].textContent);
+    $('#setting').attr('class',setting).find('.text').html($('#'+setting)[0].innerText);
+    $('#service').attr('class',service).find('.text').html($('#'+service)[0].innerText);
     $('#settings,#services').hide();
 
     if(services_obj[service][setting] != ""){
@@ -257,7 +287,7 @@ generate_url = function(setting,service){
         $('#go').attr('href', url);
         $('#link').val(url);
     }else{
-        $('#tmpl_action').html($('#setting')[0].textContent + ' in ' + $("#service")[0].textContent);
+        $('#tmpl_action').html($('#setting .text')[0].innerText + ' in ' + $("#service .text")[0].innerText);
         $('#action').addClass('no_cont');
     }
     History.pushState([service,setting], null, "/"+setting+"/"+service);

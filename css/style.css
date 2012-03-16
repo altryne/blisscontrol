@@ -80,11 +80,22 @@ h1,h2{
     text-align: center;
 }
 
+.social_buttons {
+    list-style: none;
+    position: fixed;
+    top:15px;
+    left: 15px;
+}
+.social_buttons li{
+    padding: 2px 5px;
+    list-style: none;
+    height: 25px;
+}
 #choose{
     margin: 0 auto;
     margin-top:15px;
-    width:730px;
-    text-align: center;
+    width:880px;
+    text-align: left;
     position: relative;
 }
 #setting,#service{
@@ -98,8 +109,9 @@ h1,h2{
     font-size: 20px;
     padding-top:150px;
     background-repeat: no-repeat;
-    background-position: 50% 40%;
+    background-position: 20% 30%;
     margin:35px;
+    position: relative;
 }
 #setting{
     height: 180px;
@@ -107,7 +119,6 @@ h1,h2{
     width: 140px;
     font-weight: bold;
     font-size: 23px;
-    position: relative;
 }
 #setting .height_div{
     height: 100%;
@@ -118,16 +129,12 @@ h1,h2{
     margin-left: -10px;
     visibility: hidden;
 }
-#service .text::after{
-    display: inline-block;
-    height: 16px;
-    width: 30px;
-    background: url(../img/arr.png) 0 0 no-repeat;
-    content: "";
-    vertical-align: middle;
-    margin-left: 1px;
+#service .text{
+    padding-left: 5px;
+    width: 135px;
+    text-align: center;
 }
-#setting::after{
+#setting::after,#service::after{
     display: inline-block;
     height: 16px;
     width: 30px;
@@ -150,42 +157,44 @@ h1,h2{
     font-size: 35px;
     font-weight: bold;
 }
-ul{
+#choose ul{
     display: none;
     position: absolute;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 10px 0;
     text-align: left;
     background: white;
     border: 5px dashed #656565;
+    width: 630px;
+    left: 50%;
+    margin: 0 0 0 -124px;
+    top: -9px;
+    z-index: 15;
+    height: 175px;
 }
-#settings{
-    left: 170px;
-    top: -90px;
-    padding: 10px 0;
-}
-#services{
-    right: 30px;
-    width: 210px;
-    top: -50px;
-    padding: 10px 0;
-}
-li{
+
+#choose li{
     font-size: 15px;
     cursor: pointer;
     padding:5px 10px;
     cursor: pointer;
+    display: inline-block;
+    min-width:170px;
 }
-li:hover{
-    background: #eee;
+#choose li:hover{
+    background-color: #eee;
+}
+#services{
+    width: 415px !important;
+    margin-left: -114px !important;
 }
 #services li{
     background-size: 28px;
     background-position: 10px 50%;
     background-repeat: no-repeat;
     font-weight: bold;
-    padding-left:45px;
+    min-width: 80px;
+    padding: 8px 0 8px 45px;
 }
 
 #action{
