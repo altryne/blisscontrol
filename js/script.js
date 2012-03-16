@@ -200,6 +200,7 @@ var services_obj = {
 }
 var cur_service = 'facebook';
 var cur_setting = 'profile_pic';
+var disqus_shortname = 'blisscontrol';
 
 window.fbAsyncInit = function() {
   FB.init({appId: '<APPID>', status: true, cookie: true, xfbml: true});
@@ -267,6 +268,9 @@ getShareButtons = function(){
     });
     $.getScript('//platform.stumbleupon.com/1/widgets.js',function(){
         console.log('stumbleupon');
+    });
+    $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){
+        console.log('discuss');
     });
 
 }
