@@ -76,6 +76,9 @@ td { vertical-align: top; }
 #main{
     width: 100%;
 }
+h1,h2{
+    text-align: center;
+}
 
 #choose{
     margin: 0 auto;
