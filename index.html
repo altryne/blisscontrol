@@ -114,17 +114,31 @@ Idea by: <a href="http://benjaminlang.com">Ben Lang</a> (Twitter Icon) & <a href
 Code and design by: <a href="http://alexw.me">Alex Wolkov</a> and Shay?<br>
 Assistance from: <a href="http://familio.com">Avi</a>
 <div id="fb-root"></div>
+</footer>
 
 <script src="/js/libs/jquery-1.7.1.min.js"></script>
 <script src="/js/libs/jquery.history.js"></script>
 
 <script src="/js/plugins.js"></script>
 <script src="/js/script.js"></script>
-<script>
-	var _gaq=[['_setAccount','UA-30105973-1'],['_trackPageview']];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g,s)}(document,'script'));
+<!--<script>-->
+	<!--var _gaq=[['_setAccount','UA-30105973-1'],['_trackPageview']];-->
+	<!--(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];-->
+	<!--g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';-->
+	<!--s.parentNode.insertBefore(g,s)}(document,'script'));-->
+<!--</script>-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30105973-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
 
 </body>
