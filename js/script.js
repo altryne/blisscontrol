@@ -263,7 +263,11 @@ $('document').ready(function(){
         if(!$(e.target).is('#setting,#settings,#service,#services,.text')){
             $('#settings,#services').hide();
         }
-    })
+    });
+
+    $('#link,#go').on('click',function(){
+        _gaq.push(['_trackEvent', 'Click', cur_service, cur_setting]);
+    });
 
     $('#setting').on('click',function(){
       $('#settings').toggle();
