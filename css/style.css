@@ -377,6 +377,9 @@ html,body{
 #disqus_thread a{
     color:#222
 }
+#copy{
+    font-size: 13px;
+}
 /* social icons*/
 .backgroundsize #services li{
     background-size: 28px;
