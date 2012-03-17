@@ -108,19 +108,19 @@ var services_obj = {
         "recover":"http://www.linkedin.com/passwordReset"
     },
     "google":{
-        "profile_pic":"",
-        "bio":"",
-        "delete":"",
-        "apps":"",
+        "profile_pic":"https://plus.google.com/u/0/me/about/edit/d",
+        "bio":"https://plus.google.com/u/0/me/about/edit/d",
+        "delete":"https://www.google.com/accounts/b/0/DeleteAccount",
+        "apps":"https://profiles.google.com/connectedaccounts?authuser=0",
         "email_settings":"https://www.google.com/settings/plus",
         "privacy":"https://www.google.com/settings/privacy",
         "design":"",
-        "username":"",
+        "username":"https://accounts.google.com/b/0/EditUserInfo",
         "mobile":"",
         "accounts":"https://www.google.com/settings/plus",
-        "email":"",
-        "pass":"",
-        "recover":""
+        "email":"https://www.google.com/accounts/b/0/EditUserInfo",
+        "pass":"https://www.google.com/accounts/b/0/EditPasswd",
+        "recover":"https://www.google.com/accounts/recovery"
     },
     "meetup":{
         "profile_pic":"http://www.meetup.com/account/",
@@ -154,22 +154,22 @@ var services_obj = {
     },
     "path":{
         "profile_pic":"https://path.com/settings",
-        "bio":"",
-        "delete":"",
+        "bio":"https://path.com/settings",
+        "delete":"https://path.com/settings",
         "apps":"",
         "email_settings":"https://path.com/settings",
         "privacy":"",
-        "design":"",
+        "design":"https://path.com/settings",
         "username":"",
         "mobile":"",
-        "accounts":"",
+        "accounts":"https://path.com/settings",
         "email":"",
-        "pass":"",
+        "pass":"https://path.com/settings",
         "recover":"https://path.com/forgot-password"
     },
     "instagram":{
         "profile_pic":"",
-        "bio":"",
+        "bio":"https://instagr.am/accounts/edit/",
         "delete":"",
         "apps":"https://instagr.am/accounts/login/?next=/oauth/manage_access",
         "email_settings":"",
@@ -178,24 +178,24 @@ var services_obj = {
         "username":"",
         "mobile":"",
         "accounts":"",
-        "email":"",
-        "pass":"",
+        "email":"https://instagr.am/accounts/edit/",
+        "pass":"https://instagr.am/accounts/password/change/",
         "recover":"https://instagr.am/accounts/password/reset/"
     },
     "flickr":{
         "profile_pic":"http://www.flickr.com/iconbuilder/?from=personal",
-        "bio":"",
+        "bio":"http://www.flickr.com/profile_edit.gne?from=personal",
         "delete":"http://www.flickr.com/profile_delete.gne",
         "apps":"http://www.flickr.com/services/auth/list.gne?from=extend",
         "email_settings":"http://www.flickr.com/account/email/",
         "privacy":"http://www.flickr.com/account/privacy/",
-        "design":"",
+        "design":"http://www.flickr.com/account/prefs/layout/",
         "username":"http://www.flickr.com/account/prefs/screenname/?from=personal",
         "mobile":"",
         "accounts":"http://www.flickr.com/account/sharing/",
         "email":"http://www.flickr.com/account/email/",
         "pass":"",
-        "recover":""
+        "recover":"https://edit.yahoo.com/forgotroot"
     }
 }
 var cur_service = 'facebook';
