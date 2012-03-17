@@ -112,7 +112,7 @@ html,body{
 
 }
 .social_buttons li{
-    padding: 2px 5px;
+    padding: 2px 0;
     list-style: none;
     height: 25px;
 }
