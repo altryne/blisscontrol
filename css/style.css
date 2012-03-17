@@ -273,7 +273,10 @@ html,body{
     z-index: 15;
     height: 175px;
 }
-
+#settings{
+    padding:26px 0 14px;
+    height: 155px;
+}
 #settings li,#services li{
     font-size: 15px;
     cursor: pointer;
@@ -396,7 +399,7 @@ html,body{
 
 
 /*small icons*/
-.no-backgroundsize #services li, #services li{
+.no-backgroundsize #services li{
     background-image: url(../img/all-icons.png) !important;
     background-repeat: no-repeat !important;
     height: 16px;
