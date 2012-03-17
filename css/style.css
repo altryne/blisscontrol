@@ -273,9 +273,11 @@ html,body{
     cursor: pointer;
     display: inline-block;
     min-width:170px;
+    font-weight: normal;
 }
 #settings li:hover,#services li:hover{
     background-color: #eee;
+    font-weight: bold;
 }
 #services{
     width: 415px !important;
@@ -285,10 +287,11 @@ html,body{
     background-size: 28px;
     background-position: 10px 50%;
     background-repeat: no-repeat;
-    font-weight: bold;
+    font-weight: normal;
     min-width: 80px;
     padding: 8px 0 8px 45px;
 }
+
 
 #action{
     margin-top:30px;
