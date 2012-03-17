@@ -201,30 +201,62 @@ var services_obj = {
 var cur_service = 'facebook';
 var cur_setting = 'profile_pic';
 var disqus_shortname = 'blisscontrol';
+var _gaq = _gaq || [];
 
 window.fbAsyncInit = function() {
-  FB.init({appId: '<APPID>', status: true, cookie: true, xfbml: true});
+    FB.init({appId: '<APPID>', status: true, cookie: true, xfbml: true});
+    if (FB.Event && FB.Event.subscribe) {
+        FB.Event.subscribe('edge.create',function(targetUrl) {
+                _gaq.push(['_trackSocial', 'Facebook', 'like']);
+            }
+        );
+        FB.Event.subscribe('edge.remove', function(targetUrl) {
+          _gaq.push(['_trackSocial', 'Facebook', 'unlike']);
+        });
+        FB.Event.subscribe('message.send', function(targetUrl) {
+          _gaq.push(['_trackSocial', 'Facebook', 'send']);
+        });
+    }
 };
+
 (function() {
   var e = document.createElement('script');
   e.type = 'text/javascript';
   e.src = document.location.protocol +
-     '//connect.facebook.net/en_US/all.js';;
+     '//connect.facebook.net/en_US/all.js';
   e.async = true;
   document.getElementById('fb-root').appendChild(e);
 }());
 
+(function() {
+  var e = document.createElement('script');
+  e.type = 'text/javascript';
+  e.src = document.location.protocol +
+     '//connect.facebook.net/en_US/all.js';
+  e.async = true;
+  document.getElementById('fb-root').appendChild(e);
+}());
+
+plusone_vote = function(obj){
+    if(obj.state == 'on'){
+    _gaq.push(['_trackSocial', 'Google', '+1']);
+    }
+    if(obj.state == 'off'){
+    _gaq.push(['_trackSocial', 'Google', '-1']);
+    }
+}
+window.onload = function(){
+    getShareButtons();
+}
 $('document').ready(function(){
-
-
     //init
 //    var state = History.getState();
     generate_url();
-    getShareButtons();
-    // Bind to StateChange Event
-//    History.Adapter.bind(window,'statechange',function(){
-//        var State = History.getState();
-//    });
+
+    //stupid stumbleupon won't load on window.load
+    $.cachedScript('//platform.stumbleupon.com/1/widgets.js').done(function(){
+            console.log('stumbleupon');
+    });
 
 
     $('body').on('click',function(e){
@@ -257,19 +289,19 @@ $('document').ready(function(){
 });
 
 getShareButtons = function(){
-    $.getScript('http://platform.twitter.com/widgets.js',function(){
-        console.log('linkedin loaded');
+    $.cachedScript('http://platform.twitter.com/widgets.js').done(function(){
+        twttr.events.bind('tweet', function(){
+            _gaq.push(['_trackSocial', 'twitter', 'tweet']);
+        });
     });
-    $.getScript('http://platform.linkedin.com/in.js',function(){
-        console.log('linkedin loaded');
+    $.cachedScript('http://platform.linkedin.com/in.js').done(function(obj){
+        console.log('linkedin loaded',obj,this);
     });
-    $.getScript('https://apis.google.com/js/plusone.js',function(){
+    $.cachedScript('https://apis.google.com/js/plusone.js').done(function(){
         console.log('google plus');
     });
-    $.getScript('//platform.stumbleupon.com/1/widgets.js',function(){
-        console.log('stumbleupon');
-    });
-    $.getScript('http://' + disqus_shortname + '.disqus.com/embed.js',function(){
+
+    $.cachedScript('http://' + disqus_shortname + '.disqus.com/embed.js').done(function(){
         console.log('discuss');
     });
 
