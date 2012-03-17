@@ -155,6 +155,14 @@ html,body{
     position: relative;
     min-height: 100%;
     background: url(../img/light_wool.png);
+    border:2px solid #656565;
+}
+.boxshadow #choose{
+    border:none;
+    -moz-box-shadow: 0 0 2px #000;
+    -webkit-box-shadow: 0 0 2px #000;
+    -o-box-shadow: 0 0 2px #000;
+    -ms-box-shadow: 0 0 2px #000;
     box-shadow: 0 0 2px #000;
 }
 #arrows{
@@ -284,8 +292,7 @@ html,body{
     margin-left: -114px !important;
 }
 #services li{
-    background-size: 28px;
-    background-position: 10px 50%;
+
     background-repeat: no-repeat;
     font-weight: normal;
     min-width: 80px;
@@ -368,7 +375,10 @@ html,body{
     color:#222
 }
 /* social icons*/
-
+.backgroundsize #services li{
+    background-size: 28px;
+    background-position: 10px 50%;
+}
 
 #facebook ,#service.facebook{background-image:url(../img/facebook.png)}
 #twitter ,#service.twitter{background-image:url(../img/twitter.png)}
@@ -383,6 +393,27 @@ html,body{
 #path ,#service.path{background-image:url(../img/path.png)}
 #instagram ,#service.instagram{background-image:url(../img/instagram.png)}
 #flickr ,#service.flickr{background-image:url(../img/flickr.png)}
+
+
+/*small icons*/
+.no-backgroundsize #services li, #services li{
+    background-image: url(../img/all-icons.png) !important;
+    background-repeat: no-repeat !important;
+    height: 16px;
+}
+#facebook{background-position:8px -187px;}
+#twitter{background-position:8px -29px;}
+#pinterest{background-position:8px -281px;}
+#tumblr{background-position:8px -60px;}
+#youtube{background-position:8px 3px;}
+#foursquare{background-position:8px -249px;}
+#linkedin{background-position:8px -123px;}
+#google{background-position:8px -407px;}
+#meetup{background-position:8px -312px;}
+#stumbleupon{background-position:8px -91px;}
+#path{background-position:8px -375px;}
+#instagram{background-position:8px -344px;}
+#flickr{background-position:8px -154px;}
 
 
 

@@ -15,6 +15,7 @@
 
   Social Icons template : http://tutspress.com/wpzoom.com
   Hand Drawn Arrows: http://thinkdesignblog.com/wp-content/uploads/2008/10/TD-HanddrawnArrows.zip
+  Background : http://subtlepatterns.com
 
 
 /* SITE */
