@@ -5,7 +5,7 @@ var services_obj = {
     "facebook":{
         "profile_pic":"http://www.facebook.com/editprofile.php",
         "bio":"http://www.facebook.com/editprofile.php",
-        "delete":"",
+        "delete":"http://www.facebook.com/help/contact.php?show_form=delete_account",
         "apps":"http://www.facebook.com/settings/?tab=applications",
         "email_settings":"http://www.facebook.com/settings?tab=notifications&section=Facebook&t",
         "privacy":"http://www.facebook.com/settings/?tab=privacy",
