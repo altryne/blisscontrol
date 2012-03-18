@@ -255,7 +255,7 @@ $('document').ready(function(){
 
     //stupid stumbleupon won't load on window.load
     $.cachedScript('//platform.stumbleupon.com/1/widgets.js').done(function(){
-            console.log('stumbleupon');
+//            console.log('stumbleupon');
     });
 
 
@@ -300,14 +300,14 @@ getShareButtons = function(){
         });
     });
     $.cachedScript('http://platform.linkedin.com/in.js').done(function(obj){
-        console.log('linkedin loaded',obj,this);
+//        console.log('linkedin loaded',obj,this);
     });
     $.cachedScript('https://apis.google.com/js/plusone.js').done(function(){
-        console.log('google plus');
+//        console.log('google plus');
     });
 
     $.cachedScript('http://' + disqus_shortname + '.disqus.com/embed.js').done(function(){
-        console.log('discuss');
+//        console.log('discuss');
     });
 
 }
