@@ -465,7 +465,7 @@ and (max-device-width : 480px) {
         width: 95px;
     }
     .social_buttons li:nth-child(4){
-        width:70px;
+        width:80px;
     }
     .social_buttons .title{
         width:150px;
