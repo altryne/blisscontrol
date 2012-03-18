@@ -447,6 +447,51 @@ and (max-device-width : 480px) {
 
 }
 
+@media (max-width:1024px) {
+    .social_buttons,.credits{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 790px;
+        z-index: 15;
+        height: 29px;
+        margin: 0 auto;
+        padding-left: 45px;
+        padding-top: 5px;
+    }
+    .social_buttons li{
+        display: inline-block;
+        vertical-align: bottom;
+        width: 95px;
+    }
+    .social_buttons li:nth-child(4){
+        width:70px;
+    }
+    .social_buttons .title{
+        width:150px;
+    }
+    .credits{
+        text-align: left;
+        padding-bottom: 25px;
+        padding-top: 15px;
+    }
+    .credits li{
+        display: inline-block;
+        width:106px;
+        vertical-align: bottom;
+
+    }
+    .credits .title2{
+        width:45px
+    }
+    .credits .title3{
+        width:117px
+    }
+    .credits .title4{
+        width:117px
+    }
+ }
+
 /* =============================================================================
    Non-Semantic Helper Classes
    ========================================================================== */
