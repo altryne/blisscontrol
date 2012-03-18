@@ -316,10 +316,11 @@ generate_url = function(setting,service){
     var service = cur_service = service || cur_service;
     var setting = cur_setting = setting || cur_setting;
 
+
     if(!services_obj[service]){ return };
 
-    $('#setting').attr('class',setting).find('.text').html($('#'+setting)[0].innerText);
-    $('#service').attr('class',service).find('.text').html($('#'+service)[0].innerText);
+    $('#setting').attr('class',setting).find('.text').html($('#'+setting).text());
+    $('#service').attr('class',service).find('.text').html($('#'+service).text());
     $('#settings,#services').hide();
 
     if(services_obj[service][setting] != ""){
@@ -328,7 +329,7 @@ generate_url = function(setting,service){
         $('#go').attr('href', url);
         $('#link').attr('href',url).html(url);
     }else{
-        $('#tmpl_action').html($('#setting .text')[0].innerText + ' in ' + $("#service .text")[0].innerText);
+        $('#tmpl_action').html($('#setting .text').text() + ' in ' + $("#service .text").text());
         $('#action').addClass('no_cont');
     }
 //    History.pushState([service,setting], null, "/"+setting+"/"+service);

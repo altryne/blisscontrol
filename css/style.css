@@ -333,7 +333,12 @@ html,body{
 .no_cont #go_cont{
     display: none;
 }
-
+#no_cont h3{
+    font-size: 20px;
+}
+#no_cont h4{
+    font-size: 15px;
+}
 .button {
     background: url(../img/sprite.png) no-repeat 0 -495px;
     width: 140px;
