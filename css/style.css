@@ -235,9 +235,9 @@ html,body{
     width: 135px;
     text-align: center;
 }
-#setting::after,#service::after{
+.arr6{
     display: inline-block;
-    height: 16px;
+    height: 25px;
     width: 30px;
     background: url(../img/arr.png) 0 0 no-repeat;
     content: "";
@@ -245,7 +245,7 @@ html,body{
     margin-left: 1px;
     position: absolute;
     top: 50%;
-    margin-top: -4px;
+    margin-top: -12px;
     right: 0px;
 }
 #setting .text{
@@ -304,7 +304,7 @@ html,body{
 
 
 #action{
-    margin-top:30px;
+    margin-top:50px;
     text-align: left;
     padding-left: 74px;
     padding-top: 25px;
@@ -421,7 +421,19 @@ html,body{
 #instagram{background-position:8px -344px;}
 #flickr{background-position:8px -154px;}
 
-
+.help{
+    background: url(../img/sprite.png) 0 -784px;
+    position: absolute;
+    bottom: -48px;
+    height: 25px;
+    left: 5px;
+    width: 165px;
+    padding-bottom: 10px;
+    opacity: 0.6;
+}
+#service:hover .help,#setting:hover .help{
+    opacity: 1;
+}
 
 
 /* =============================================================================

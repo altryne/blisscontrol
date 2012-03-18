@@ -198,7 +198,7 @@ var services_obj = {
         "recover":"https://edit.yahoo.com/forgotroot"
     }
 }
-var cur_service = 'facebook';
+var cur_service = 'twitter';
 var cur_setting = 'profile_pic';
 var disqus_shortname = 'blisscontrol';
 var _gaq = _gaq || [];
@@ -260,7 +260,7 @@ $('document').ready(function(){
 
 
     $('body').on('click',function(e){
-        if(!$(e.target).is('#setting,#settings,#service,#services,.text')){
+        if(!$(e.target).is('#setting,#settings,#service,#services,.text,.help')){
             $('#settings,#services').hide();
         }
     });
@@ -268,28 +268,29 @@ $('document').ready(function(){
     $('#link,#go').on('click',function(){
         _gaq.push(['_trackEvent', 'Click', cur_service, cur_setting]);
     });
-
-    $('#setting').on('click',function(){
-      $('#settings').toggle();
-      $('#services').hide();
-    });
-
-    $('#service').on('click',function(){
-      $('#services').toggle();
-      $('#settings').hide();
-    });
-
     $('#settings').on('click','li',function(){
         var setting = $(this).data('id');
         $('#settings,#services').hide();
         generate_url(setting, cur_service);
-
     });
 
     $('#services').on('click','li',function(){
         var service = $(this).data('id');
+        $('#settings,#services').hide();
         generate_url(cur_setting, service);
     });
+
+    $('#setting').on('click',function(e){
+      $('#settings').toggle();
+      $('#services').hide();
+    });
+
+    $('#service').on('click',function(e){
+      $('#services').toggle();
+      $('#settings').hide();
+    });
+
+
 });
 
 getShareButtons = function(){
