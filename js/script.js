@@ -260,7 +260,7 @@ $('document').ready(function(){
 
 
     $('body').on('click',function(e){
-        if(!$(e.target).is('#setting,#settings,#service,#services,.text,.help')){
+        if(!$(e.target).is('#setting,#settings,#service,#services,.text,.help,.arr6')){
             $('#settings,#services').hide();
         }
     });
