@@ -254,9 +254,8 @@ $('document').ready(function(){
     generate_url();
 
     //stupid stumbleupon won't load on window.load
-    $.cachedScript('//platform.stumbleupon.com/1/widgets.js').done(function(){
-//            console.log('stumbleupon');
-    });
+//    $.cachedScript('//platform.stumbleupon.com/1/widgets.js').done(function(){
+//    });
 
 
     $('body').on('click',function(e){
