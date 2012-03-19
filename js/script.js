@@ -50,7 +50,7 @@ var services_obj = {
     "tumblr":{
         "profile_pic":"",
         "bio":"",
-        "delete":"",
+        "delete":"http://www.tumblr.com/account/delete",
         "apps":"https://www.tumblr.com/preferences",
         "email_settings":"https://www.tumblr.com/preferences",
         "privacy":"",
