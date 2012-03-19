@@ -385,6 +385,9 @@ html,body{
 #copy{
     font-size: 13px;
 }
+#PicNetEyeTracker {
+    font-size: 10px;
+}
 /* social icons*/
 .backgroundsize #services li{
     background-size: 28px;
