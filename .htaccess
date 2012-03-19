@@ -3,5 +3,6 @@
 	RewriteRule ^(js|css|img)($|/) - [L]
 	RewriteCond %{REQUEST_FILENAME} !-f
 	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteRule . /index.html [L]
+	RewriteRule ^faq/ /faq [NC] 302
+#	RewriteRule . /index.html [NC]
 </IfModule>

@@ -14,8 +14,8 @@ body { margin: 0; font-size: 1em; line-height: 1.4; }
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
+a { color: #747474; }
+a:visited { color: #725874; }
 a:hover { color: #06e; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
@@ -116,6 +116,16 @@ html,body{
     list-style: none;
     height: 25px;
 }
+.title6{
+    background: url('../img/sprite.png') no-repeat 0 -837px;
+    margin-top:15px;
+}
+.faq{
+ padding-left: 5px;
+}
+.faq a{
+    font-size: 14px;
+}
 .credits{
     width: 150px;
     list-style: none;
@@ -124,16 +134,17 @@ html,body{
     left: 50%;
     margin-left: -505px;
     padding: 0;
+    text-align: left;
 }
 .credits li{
     padding: 2px 5px;
     list-style: none;
     height: 20px;
     font-size: 14px;
-    color:#747474;
+
 }
 .credits a{
-    color: #747474;
+
 }
 .credits li.ir{
     margin:5px 0  0 0;
@@ -313,7 +324,7 @@ html,body{
 #link{
     border-bottom: 5px dashed #AFAFAF;
     font-size: 18px;
-    color: #1D1D1D;
+
     padding-bottom: 5px;
     width: 390px;
     display: inline-block;
@@ -323,6 +334,9 @@ html,body{
     overflow: hidden;
     text-overflow: ellipsis;
     padding-top:17px;
+}
+#link:link{
+    color: #1D1D1D;
 }
 #no_cont{
     display: none;
@@ -444,6 +458,29 @@ html,body{
 }
 
 
+
+/*faq*/
+.faq_title{
+    text-align: left !important;
+    padding-left: 15px;
+}
+.faq{
+    text-align: left;
+    padding:15px;
+    width:640px;
+}
+.faq dt{
+    font-size: 20px;
+    font-weight: bold;
+    margin:10px 0;
+}
+.faq dd{
+    font-size: 14px;
+}
+.faq ul{
+    padding: 0;
+    list-style-position: outside;
+}
 /* =============================================================================
    Media Queries
    ========================================================================== */
@@ -475,8 +512,19 @@ and (max-device-width : 480px) {
     .social_buttons li:nth-child(4){
         width:80px;
     }
+    .social_buttons li:nth-child(5){
+        width:100px;
+    }
     .social_buttons .title{
         width:150px;
+    }
+
+    .social_buttons .title6{
+        visibility: hidden;
+        margin: 0
+    }
+    .social_buttons .faq{
+
     }
     .credits{
         text-align: left;
