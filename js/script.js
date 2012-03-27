@@ -309,7 +309,7 @@ getShareButtons = function(){
 //        console.log('discuss');
     });
 
-    $.cachedScript('http://met.picnet.com.au/resources/scripts/met.client.min.js?usercode=2475541719870466').done(function(){
+    $.cachedScript('http://static.bufferapp.com/js/button.js').done(function(){
 
     });
 

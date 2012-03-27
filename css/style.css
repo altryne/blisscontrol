@@ -513,15 +513,16 @@ and (max-device-width : 480px) {
         width:80px;
     }
     .social_buttons li:nth-child(5){
-        width:100px;
+        width:105px;
     }
     .social_buttons .title{
-        width:150px;
+        width:130px;
     }
 
     .social_buttons .title6{
         visibility: hidden;
-        margin: 0
+        margin: 0;
+        width:25px;
     }
     .social_buttons .faq{
 
