@@ -204,7 +204,7 @@ var disqus_shortname = 'blisscontrol';
 var _gaq = _gaq || [];
 
 window.fbAsyncInit = function() {
-    FB.init({appId: '<APPID>', status: true, cookie: true, xfbml: true});
+    FB.init({appId: '', status: true, cookie: true, xfbml: true});
     if (FB.Event && FB.Event.subscribe) {
         FB.Event.subscribe('edge.create',function(targetUrl) {
                 _gaq.push(['_trackSocial', 'Facebook', 'like']);
